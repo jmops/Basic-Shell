@@ -1,1 +1,1 @@
-bsh, or Basic Shell, is a simple yet unfinished shell for UNIX created by yours truly, in C.
+Basic Shell (bsh), is a simple, but unfinished, shell for UNIX. Created by yours truly, in C.
