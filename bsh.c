@@ -13,6 +13,7 @@
 #include <ctype.h> // strcmp, strtok
 #include <sys/wait.h> // waitpid
 #include <signal.h>   // Signal
+#include <stdlib.h>
 
 void parseAndExecute();
 void execute(char ** args);
@@ -84,6 +85,7 @@ void execute(char ** args){
         signal(SIGINT, SIG_DFL); // Signal default behavior
         if(execvp(args[0], args) == -1){ // Error
             perror("bsh");
+            exit(1);    // Kill child
         } 
     }
     else if(newProcess > 0){ // Parent process
